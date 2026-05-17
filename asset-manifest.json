@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/comtech-suppliers/static/css/main.4d99a7c7.css",
+    "main.js": "/comtech-suppliers/static/js/main.03128fa0.js",
+    "static/js/453.f90694d0.chunk.js": "/comtech-suppliers/static/js/453.f90694d0.chunk.js",
+    "index.html": "/comtech-suppliers/index.html",
+    "main.4d99a7c7.css.map": "/comtech-suppliers/static/css/main.4d99a7c7.css.map",
+    "main.03128fa0.js.map": "/comtech-suppliers/static/js/main.03128fa0.js.map",
+    "453.f90694d0.chunk.js.map": "/comtech-suppliers/static/js/453.f90694d0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4d99a7c7.css",
+    "static/js/main.03128fa0.js"
+  ]
+}
