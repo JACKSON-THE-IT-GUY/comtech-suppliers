@@ -60,7 +60,7 @@ const Products = () => {
                     {visible.filter((p) => p.category === cat.id).length}
                   </span>
                 </h2>
-                <div className="grid grid-cols-3 gap-2 sm:gap-4 lg:gap-6">
+                <div className="grid grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4 lg:gap-6">
           {visible.filter((p) => p.category === cat.id).map((p) => {
             return (
               <div
