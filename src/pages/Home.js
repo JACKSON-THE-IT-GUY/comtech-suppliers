@@ -1,98 +1,89 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { SHOP_NAME, TAGLINE, generalEnquiryLink, whatsappLink } from "../config";
+import { categories, services } from "../services/productData";
+import WhatsAppButton from "../components/WhatsAppButton";
 
-const categories = [{
-        name: "Computing Solutions",
-        description: "High-performance workstations and enterprise mobility hardware.",
-        tag: "Enterprise Hardware",
-    },
-    {
-        name: "Imaging & Printing",
-        description: "Advanced document management and industrial printing solutions.",
-        tag: "Office Equipment",
-    },
-    {
-        name: "ICT Networking",
-        description: "Scalable network infrastructure and secure connectivity tools.",
-        tag: "Infrastructure",
-    },
-    {
-        name: "Corporate Stationery",
-        description: "Premium consumables for streamlined business operations.",
-        tag: "Supplies",
-    },
-];
+const Home = () => (
+  <div>
+    <section className="bg-[#0f172a] text-white py-20 px-6">
+      <div className="max-w-7xl mx-auto">
+        <p className="text-red-400 font-bold uppercase tracking-widest mb-4">{TAGLINE}</p>
+        <h1 className="text-4xl md:text-6xl font-black tracking-tight max-w-3xl">
+          Printers, copiers, laptops &amp; supplies for your office.
+        </h1>
+        <p className="text-slate-300 mt-6 max-w-2xl text-lg">
+          {SHOP_NAME} stocks Canon, HP and Samsung machines, toner, drums, Riso master &amp; ink,
+          and inkjet ink. Message us on WhatsApp for prices and availability.
+        </p>
+        <div className="mt-8 flex flex-wrap gap-4">
+          <WhatsAppButton href={generalEnquiryLink()} className="!px-6 !py-3">
+            Chat on WhatsApp
+          </WhatsAppButton>
+          <Link
+            to="/products"
+            className="inline-flex items-center px-6 py-3 rounded-xl border border-slate-600 font-bold hover:bg-slate-800"
+          >
+            Browse Products
+          </Link>
+        </div>
+        <img
+          src="/images/products.png"
+          alt="Stationery, toner, printers and photocopiers"
+          className="mt-12 w-full max-w-4xl rounded-2xl"
+        />
+      </div>
+    </section>
 
-const Home = () => {
-    return ( <
-        <
-        div className = "bg-[#0f172a] min-h-screen text-white" > { " " } { /* Hero Section */ } { " " } <
-        section className = "relative h-[85vh] flex items-center justify-center overflow-hidden" > { " " } { /* LOCAL IMAGE REFERENCE */ } { " " } <
-        div className = "absolute inset-0 z-0 opacity-30 bg-cover bg-center bg-no-repeat"
-        style = {
-            {
-                backgroundImage: `url('/images/background.png')`,
-            }
-        } >
-        <
-        /div> { / * Gradient Overlay * / } { " " } <
-        div className = "absolute inset-0 bg-gradient-to-b from-[#0f172a]/20 via-[#0f172a]/80 to-[#0f172a] z-10" > { " " } <
-        /div> <
-        div className = "relative z-20 text-center px-6 max-w-4xl" >
-        <
-        span className = "text-blue-500 font-bold uppercase tracking-[0.4em] text-[10px] mb-4 block" >
-        Official Corporate Provider { " " } <
-        /span>{" "} <
-        h1 className = "text-5xl md:text-8xl font-extrabold tracking-tighter mb-6" >
-        COMTECH { " " } <
-        span className = "text-blue-600 font-light text-4xl md:text-7xl block md:inline" > { " " }
-        SUPPLIERS { " " } <
-        /span>{" "} < /
-        h1 > { " " } <
-        p className = "text-slate-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed mb-10 font-light" >
-        Your strategic partner in ICT infrastructure, high - end computing,
-        and specialized office supplies in Zambia. { " " } <
-        /p>{" "} <
-        div className = "flex flex-col sm:flex-row justify-center gap-6" >
-        <
-        a href = "/products"
-        className = "bg-blue-600 hover:bg-blue-700 text-white px-12 py-4 font-bold uppercase tracking-widest text-[10px] transition-all duration-300" >
-        Explore Inventory { " " } <
-        /a>{" "} <
-        a href = "https://wa.me/0779495904"
-        className = "border border-slate-700 hover:bg-white hover:text-black text-white px-12 py-4 font-bold uppercase tracking-widest text-[10px] transition-all duration-300" >
-        Consult Sales { " " } <
-        /a>{" "} < /
-        div > { " " } <
-        /div>{" "} < /
-        section > { /* Categories Section */ } { " " } <
-        section className = "max-w-7xl mx-auto px-6 py-20" >
-        <
-        div className = "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4" > { " " } {
-            categories.map((item, index) => ( <
-                div key = { index }
-                className = "group bg-[#1e293b]/40 backdrop-blur-sm p-10 border border-slate-800/50 hover:border-blue-600 transition-all duration-500" >
-                <
-                p className = "text-blue-500 text-[9px] font-black uppercase tracking-widest mb-6" > { " " } { item.tag } { " " } <
-                /p>{" "} <
-                h3 className = "text-xl font-bold mb-4 tracking-tight group-hover:text-blue-400 transition-colors" > { " " } { item.name } { " " } <
-                /h3>{" "} <
-                p className = "text-slate-400 text-sm leading-relaxed mb-8" > { " " } { item.description } { " " } <
-                /p>{" "} <
-                div className = "w-8 h-[1px] bg-slate-700 group-hover:w-full group-hover:bg-blue-600 transition-all duration-700" > { " " } <
-                /div>{" "} < /
-                div >
-            ))
-        } { " " } <
-        /div>{" "} < /
-        section > { /* Footer Branding */ } { " " } <
-        footer className = "py-12 border-t border-slate-900 text-center" >
-        <
-        p className = "text-slate-600 text-[10px] font-bold uppercase tracking-[0.5em]" >
-        ComTech Suppliers© 2026 | Professional ICT Solutions { " " } <
-        /p>{" "} < /
-        footer > { " " } <
-        /div>
-    );
-};
+    <section className="max-w-7xl mx-auto px-6 pt-16">
+      <h2 className="text-2xl font-black text-slate-900 mb-8">Visit our shop</h2>
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        {[1, 2, 3].map((n) => (
+          <img
+            key={n}
+            src={`/images/shop-${n}.png`}
+            alt={`Inside the ${SHOP_NAME} shop`}
+            className="w-full h-72 object-cover rounded-2xl border border-slate-200"
+          />
+        ))}
+      </div>
+    </section>
+
+    <section className="max-w-7xl mx-auto px-6 py-16">
+      <h2 className="text-2xl font-black text-slate-900 mb-8">What we sell</h2>
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        {categories.map((c) => (
+          <Link
+            key={c.id}
+            to={`/products?category=${c.id}`}
+            className="bg-white border border-slate-200 rounded-2xl p-6 text-center hover:shadow-lg transition"
+          >
+            <div className="text-4xl mb-3">{c.icon}</div>
+            <div className="font-bold text-slate-800">{c.name}</div>
+          </Link>
+        ))}
+      </div>
+    </section>
+
+    <section className="max-w-7xl mx-auto px-6 pb-16">
+      <h2 className="text-2xl font-black text-slate-900 mb-8">Our services</h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {services.map((s) => (
+          <a
+            key={s.name}
+            href={whatsappLink(`Hello ${SHOP_NAME}, I need help with: ${s.name}.`)}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-white border border-slate-200 rounded-2xl p-6 hover:shadow-lg transition"
+          >
+            <div className="text-3xl mb-2">{s.icon}</div>
+            <div className="font-bold text-slate-900">{s.name}</div>
+            <p className="text-slate-600 text-sm mt-1">{s.detail}</p>
+          </a>
+        ))}
+      </div>
+    </section>
+  </div>
+);
 
 export default Home;
