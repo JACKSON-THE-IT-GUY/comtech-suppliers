@@ -11,7 +11,7 @@ function App() {
     <Router basename={process.env.PUBLIC_URL}>
       <div className="flex flex-col min-h-screen bg-slate-50">
         <Navbar />
-        <main className="flex-grow">
+        <main className="flex-grow pt-20">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/products" element={<Products />} />

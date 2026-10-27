@@ -12,9 +12,12 @@ const Footer = () => (
           Quality products, reliable services, affordable prices.
         </p>
       </div>
-      <p className="text-slate-300 text-sm text-center">
-        Call: 0971991017 / 0571542402 / 0977722773 / 0779495904 / 0966353101
-      </p>
+      <div className="text-slate-300 text-sm text-center space-y-1">
+        <p>Call: 0966353101 / 0977722773 / 0779495904</p>
+        <p>
+          Find us: Lusaka (opposite Town Centre) · Kaoma (Bus Terminus) · Mongu (Bus Terminus &amp; Town) · Senanga
+        </p>
+      </div>
       <WhatsAppButton href={generalEnquiryLink()}>Order via WhatsApp</WhatsAppButton>
     </div>
     <p className="text-center text-slate-500 text-xs mt-8">

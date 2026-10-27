@@ -13,29 +13,29 @@ const featured = [
 
 const Home = () => (
   <div>
-    <section className="relative overflow-hidden bg-white text-slate-900 py-20 px-6">
+    <section className="relative overflow-hidden bg-white text-slate-900 py-14 sm:py-20 px-4 sm:px-6">
       <img
         src={asset("/images/hero-copier.png")}
         alt=""
         aria-hidden="true"
-        className="absolute right-4 md:right-16 top-0 h-full w-auto opacity-20 md:opacity-100 pointer-events-none select-none"
+        className="absolute right-2 md:right-16 top-0 h-full w-[38%] md:w-auto object-contain object-right pointer-events-none select-none"
       />
-      <div className="relative max-w-7xl mx-auto">
-        <p className="text-red-600 font-bold uppercase tracking-widest mb-4">{TAGLINE}</p>
-        <h1 className="text-4xl md:text-6xl font-black tracking-tight max-w-3xl">
+      <div className="relative max-w-7xl mx-auto pr-[40%] md:pr-0">
+        <p className="text-red-600 font-bold uppercase tracking-widest mb-4 text-xs sm:text-base">{TAGLINE}</p>
+        <h1 className="text-2xl sm:text-4xl md:text-6xl font-black tracking-tight max-w-3xl">
           Printers, copiers, laptops &amp; supplies for your office.
         </h1>
-        <p className="text-slate-700 mt-6 max-w-xl text-lg">
+        <p className="text-slate-700 mt-4 sm:mt-6 max-w-xl text-sm sm:text-lg">
           {SHOP_NAME} stocks Canon, HP and Samsung machines, toner, drums, Riso master &amp; ink,
           and inkjet ink. Message us on WhatsApp for prices and availability.
         </p>
         <div className="mt-8 flex flex-wrap gap-4">
-          <WhatsAppButton href={generalEnquiryLink()} className="!px-6 !py-3">
+          <WhatsAppButton href={generalEnquiryLink()} className="!px-4 sm:!px-6 !py-3 text-sm sm:text-base">
             Chat on WhatsApp
           </WhatsAppButton>
           <Link
             to="/products"
-            className="inline-flex items-center px-6 py-3 rounded-xl border border-slate-400 font-bold hover:bg-slate-100"
+            className="inline-flex items-center px-4 sm:px-6 py-3 text-sm sm:text-base rounded-xl border border-slate-400 font-bold hover:bg-slate-100"
           >
             Browse Products
           </Link>
