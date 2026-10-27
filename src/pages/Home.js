@@ -4,6 +4,13 @@ import { SHOP_NAME, TAGLINE, generalEnquiryLink, whatsappLink } from "../config"
 import { categories, services } from "../services/productData";
 import WhatsAppButton from "../components/WhatsAppButton";
 
+const featured = [
+  { title: "Printers", image: "/images/colorprinter.png", message: `Hello ${SHOP_NAME}, I'm interested in printers.` },
+  { title: "Computers", image: "/images/computer.png", message: `Hello ${SHOP_NAME}, I'm interested in desktop computers.` },
+  { title: "Laptops", image: "/images/laptop.png", message: `Hello ${SHOP_NAME}, I'm interested in laptops.` },
+  { title: "Stationery", image: "/images/stationary.png", message: `Hello ${SHOP_NAME}, I'm interested in stationery.` },
+];
+
 const Home = () => (
   <div>
     <section className="relative overflow-hidden bg-white text-slate-900 py-20 px-6">
@@ -37,11 +44,20 @@ const Home = () => (
     </section>
 
     <section className="max-w-7xl mx-auto px-6 pt-12">
-      <img
-        src="/images/products.png"
-        alt="Stationery, toner, printers and photocopiers"
-        className="w-full rounded-2xl"
-      />
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        {featured.map((f) => (
+          <a
+            key={f.title}
+            href={whatsappLink(f.message)}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-white border border-slate-200 rounded-2xl p-4 text-center hover:shadow-lg transition"
+          >
+            <img src={f.image} alt={f.title} className="w-full aspect-square object-contain" />
+            <div className="font-bold text-slate-900 mt-2">{f.title}</div>
+          </a>
+        ))}
+      </div>
     </section>
 
     <section className="max-w-7xl mx-auto px-6 pt-16">
