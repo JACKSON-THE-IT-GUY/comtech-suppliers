@@ -1,3 +1,5 @@
+import { asset } from "../config";
+
 export const categories = [
   { id: "paper", name: "Paper & Books", icon: "📚" },
   { id: "files", name: "Files & Folders", icon: "🗂️" },
@@ -384,6 +386,6 @@ let nextId = 1;
 export const products = Object.entries(sections).flatMap(([category, rows]) =>
   rows.map(([name, price, note]) => {
     const key = exactImages[name] || imageRules.find(([re]) => re.test(name))?.[1];
-    return { id: nextId++, name, category, price, note, image: key ? `/images/products/${key}.jpg` : null };
+    return { id: nextId++, name, category, price, note, image: key ? asset(`/images/products/${key}.jpg`) : null };
   }),
 );

@@ -8,7 +8,7 @@ import Credits from "./pages/Credits";
 
 function App() {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <div className="flex flex-col min-h-screen bg-slate-50">
         <Navbar />
         <main className="flex-grow">

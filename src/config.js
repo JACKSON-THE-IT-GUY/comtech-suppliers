@@ -1,5 +1,8 @@
 // WhatsApp number: country code + number, digits only (no + or spaces)
 export const WHATSAPP_NUMBER = "260779495904";
+// Works both locally and under the GitHub Pages sub-path (set via "homepage" in package.json)
+export const asset = (path) => `${process.env.PUBLIC_URL}${path}`;
+
 export const SHOP_NAME = "ComTech Suppliers";
 export const TAGLINE = "Your One Stop Tech & Stationery Shop";
 

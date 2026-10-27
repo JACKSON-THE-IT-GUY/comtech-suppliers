@@ -1,21 +1,21 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { SHOP_NAME, TAGLINE, generalEnquiryLink, whatsappLink } from "../config";
+import { SHOP_NAME, TAGLINE, asset, generalEnquiryLink, whatsappLink } from "../config";
 import { categories, services } from "../services/productData";
 import WhatsAppButton from "../components/WhatsAppButton";
 
 const featured = [
-  { title: "Printers", image: "/images/colorprinter.png", message: `Hello ${SHOP_NAME}, I'm interested in printers.` },
-  { title: "Computers", image: "/images/computer.png", message: `Hello ${SHOP_NAME}, I'm interested in desktop computers.` },
-  { title: "Laptops", image: "/images/laptop.png", message: `Hello ${SHOP_NAME}, I'm interested in laptops.` },
-  { title: "Stationery", image: "/images/stationary.png", message: `Hello ${SHOP_NAME}, I'm interested in stationery.` },
+  { title: "Printers", image: asset("/images/colorprinter.png"), message: `Hello ${SHOP_NAME}, I'm interested in printers.` },
+  { title: "Computers", image: asset("/images/computer.png"), message: `Hello ${SHOP_NAME}, I'm interested in desktop computers.` },
+  { title: "Laptops", image: asset("/images/laptop.png"), message: `Hello ${SHOP_NAME}, I'm interested in laptops.` },
+  { title: "Stationery", image: asset("/images/stationary.png"), message: `Hello ${SHOP_NAME}, I'm interested in stationery.` },
 ];
 
 const Home = () => (
   <div>
     <section className="relative overflow-hidden bg-white text-slate-900 py-20 px-6">
       <img
-        src="/images/hero-copier.png"
+        src={asset("/images/hero-copier.png")}
         alt=""
         aria-hidden="true"
         className="absolute right-4 md:right-16 top-0 h-full w-auto opacity-20 md:opacity-100 pointer-events-none select-none"
@@ -66,7 +66,7 @@ const Home = () => (
         {[1, 2, 3].map((n) => (
           <img
             key={n}
-            src={`/images/shop-${n}.png`}
+            src={asset(`/images/shop-${n}.png`)}
             alt={`Inside the ${SHOP_NAME} shop`}
             className="w-full h-72 object-cover rounded-2xl border border-slate-200"
           />
