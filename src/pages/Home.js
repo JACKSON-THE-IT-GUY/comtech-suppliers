@@ -6,13 +6,19 @@ import WhatsAppButton from "../components/WhatsAppButton";
 
 const Home = () => (
   <div>
-    <section className="bg-[#0f172a] text-white py-20 px-6">
-      <div className="max-w-7xl mx-auto">
-        <p className="text-red-400 font-bold uppercase tracking-widest mb-4">{TAGLINE}</p>
+    <section className="relative overflow-hidden bg-white text-slate-900 py-20 px-6">
+      <img
+        src="/images/hero-copier.png"
+        alt=""
+        aria-hidden="true"
+        className="absolute right-4 md:right-16 top-0 h-full w-auto opacity-20 md:opacity-100 pointer-events-none select-none"
+      />
+      <div className="relative max-w-7xl mx-auto">
+        <p className="text-red-600 font-bold uppercase tracking-widest mb-4">{TAGLINE}</p>
         <h1 className="text-4xl md:text-6xl font-black tracking-tight max-w-3xl">
           Printers, copiers, laptops &amp; supplies for your office.
         </h1>
-        <p className="text-slate-300 mt-6 max-w-2xl text-lg">
+        <p className="text-slate-700 mt-6 max-w-xl text-lg">
           {SHOP_NAME} stocks Canon, HP and Samsung machines, toner, drums, Riso master &amp; ink,
           and inkjet ink. Message us on WhatsApp for prices and availability.
         </p>
@@ -22,17 +28,20 @@ const Home = () => (
           </WhatsAppButton>
           <Link
             to="/products"
-            className="inline-flex items-center px-6 py-3 rounded-xl border border-slate-600 font-bold hover:bg-slate-800"
+            className="inline-flex items-center px-6 py-3 rounded-xl border border-slate-400 font-bold hover:bg-slate-100"
           >
             Browse Products
           </Link>
         </div>
-        <img
-          src="/images/products.png"
-          alt="Stationery, toner, printers and photocopiers"
-          className="mt-12 w-full max-w-4xl rounded-2xl"
-        />
       </div>
+    </section>
+
+    <section className="max-w-7xl mx-auto px-6 pt-12">
+      <img
+        src="/images/products.png"
+        alt="Stationery, toner, printers and photocopiers"
+        className="w-full rounded-2xl"
+      />
     </section>
 
     <section className="max-w-7xl mx-auto px-6 pt-16">
